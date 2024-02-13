@@ -1,15 +1,16 @@
 package com.example.backend.dto;
 
+import org.springframework.stereotype.Component;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+@Component
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
-public class Employee_DTO {
-    private int empID;
-    private String empName;
-    private String empAddress;
-    private String empContactNumber;
+public class Response_DTO {
+    private String code;
+    private String message;
+    private Object content;
 }
