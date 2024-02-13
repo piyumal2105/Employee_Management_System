@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./js/jquery-3.7.1.min.js"></script>
+    <script src="./js/Employee.js"></script>
+    <title>Employee Management System</title>
+  </head>
+  <body>
+    <div>
+      <nav class="navbar bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand">Employee Management System</a>
+          <form class="d-flex" role="search">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+
+            <button class="btn btn-primary" type="submit" style="width: 100px">
+              Search
+            </button>
+          </form>
+        </div>
+      </nav>
+    </div>
+
+    <div class="container mt-5 col-6">
+      <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label"
+          >Employee ID</label
+        >
+        <input
+          type="text"
+          class="form-control"
+          id="exampleFormControlInput1"
+          placeholder=""
+          disabled
+        />
+      </div>
+
+      <div class="mb-3">
+        <label for="exampleFormControlInput2" class="form-label"
+          >Employee Name</label
+        >
+        <input
+          type="text"
+          class="form-control"
+          id="exampleFormControlInput2"
+          placeholder=""
+          required
+        />
+      </div>
+
+      <div class="mb-3">
+        <label for="exampleFormControlInput3" class="form-label"
+          >Employee Address</label
+        >
+        <input
+          type="text"
+          class="form-control"
+          id="exampleFormControlInput3"
+          placeholder=""
+          required
+        />
+      </div>
+
+      <div class="mb-3">
+        <label for="exampleFormControlInput4" class="form-label"
+          >Employee Conact Number</label
+        >
+        <input
+          type="number"
+          class="form-control"
+          id="exampleFormControlInput4"
+          placeholder=""
+          required
+        />
+      </div>
+
+      <div>
+        <button
+          type="button"
+          class="btn btn-primary"
+          onclick="addEmployee()"
+          style="width: 100px"
+        >
+          Save
+        </button>
+        <button
+          type="button"
+          class="btn btn-success"
+          onclick="updateEmployee()"
+          style="width: 100px"
+        >
+          Update
+        </button>
+        <button
+          type="button"
+          class="btn btn-danger"
+          onclick="deleteEmployee()"
+          style="width: 100px"
+        >
+          Delete
+        </button>
+      </div>
+
+      <br /><br />
+      <div class="mt-3">
+        <div class="table-sections">
+          <table
+            class="table table-bordered border-dark table-hover table-striped"
+          >
+            <thead>
+              <tr>
+                <th scope="col">Employee ID</th>
+                <th scope="col">Employee Name</th>
+                <th scope="col">Employee Address</th>
+                <th scope="col">Employee Contact Number</th>
+              </tr>
+            </thead>
+            <tbody id="empTable"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
